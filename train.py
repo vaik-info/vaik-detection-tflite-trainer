@@ -40,7 +40,7 @@ if __name__ == '__main__':
     parser.add_argument('--valid_label_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
     parser.add_argument('--classes_txt_path', type=str, default='~/.vaik-mnist-detection-dataset/classes.txt')
     parser.add_argument('--model_output_dir_path', type=str, default='~/output_model')
-    parser.add_argument('--epoch_size', type=int, default=1)
+    parser.add_argument('--epoch_size', type=int, default=20)
     parser.add_argument('--batch_size', type=int, default=8)
     parser.add_argument('--max_detections', type=int, default=100)
     args = parser.parse_args()
