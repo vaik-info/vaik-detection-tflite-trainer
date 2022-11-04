@@ -23,14 +23,14 @@ def main(train_image_dir_path, train_label_dir_path, valid_image_dir_path, valid
     valid_data_loader = object_detector.DataLoader.from_pascal_voc(images_dir=valid_image_dir_path,
                                                                    annotations_dir=valid_label_dir_path,
                                                                    label_map=label_map)
-    spec = model_spec.get('efficientdet_lite0')
-    model = object_detector.create(train_data=train_data_loader,
+    spec = object_detector.EfficientDetLite0Spec(model_dir=model_output_dir_path, tflite_max_detections=max_detections)
+    spec.config.map_freq = 1
+    object_detector.create(train_data=train_data_loader,
                            model_spec=spec,
                            validation_data=valid_data_loader,
                            epochs=epoch_size,
                            batch_size=batch_size,
                            train_whole_model=True)
-    model.export(export_dir='.')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='train')
