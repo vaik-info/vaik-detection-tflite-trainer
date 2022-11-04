@@ -34,8 +34,8 @@ def main(train_image_dir_path, train_label_dir_path, valid_image_dir_path, valid
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='train')
-    parser.add_argument('--train_image_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
-    parser.add_argument('--train_label_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
+    parser.add_argument('--train_image_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/train')
+    parser.add_argument('--train_label_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/train')
     parser.add_argument('--valid_image_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
     parser.add_argument('--valid_label_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
     parser.add_argument('--classes_txt_path', type=str, default='~/.vaik-mnist-detection-dataset/classes.txt')
