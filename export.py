@@ -47,7 +47,7 @@ if __name__ == '__main__':
     parser.add_argument('--valid_label_dir_path', type=str, default='~/.vaik-mnist-detection-dataset/valid')
     parser.add_argument('--classes_txt_path', type=str, default='~/.vaik-mnist-detection-dataset/classes.txt')
     parser.add_argument('--ckpt_path', type=str, default='~/output_model/ckpt-20')
-    parser.add_argument('--model_output_dir_path', type=str, default='~/export_model')
+    parser.add_argument('--model_output_dir_path', type=str, default='~/output_tflite_model')
     parser.add_argument('--max_detections', type=int, default=100)
     args = parser.parse_args()
 
